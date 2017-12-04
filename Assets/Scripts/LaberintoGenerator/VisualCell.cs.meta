@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f12da93b88b759a47a5f070b6109f7d6
+timeCreated: 1510748233
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Este: {fileID: 4135834797078110, guid: a073d467c67205745a731ce90b892ff2, type: 2}
+  - Oeste: {fileID: 4643352349806052, guid: a073d467c67205745a731ce90b892ff2, type: 2}
+  - Norte: {fileID: 4686911894750574, guid: a073d467c67205745a731ce90b892ff2, type: 2}
+  - Sur: {fileID: 4998916502001862, guid: a073d467c67205745a731ce90b892ff2, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
