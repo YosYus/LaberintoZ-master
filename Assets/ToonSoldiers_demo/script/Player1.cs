@@ -5,13 +5,16 @@ using UnityEngine;
 public class Player1 : MonoBehaviour {
 	
 	//Variables públicas
-	 public float velocidad = 7f;
+	 public float velocidad = 15f;
 	 public float velGiro = 12f;
-	 
+	 public Transform enemigo;
+	 public Transform head;
 	 
 	 //Variables privadas
 	 private Animator anim;
 	 private Rigidbody playerRigidbody;
+
+
 	 private Vector3 desplazamiento;
 	 
 	 
@@ -47,8 +50,8 @@ public class Player1 : MonoBehaviour {
 		
 		Vector3 targetDirection = new Vector3 (hor,0f, ver);
 		Quaternion targetRotation = Quaternion.LookRotation(targetDirection,Vector3.up);
-		Quaternion newRotation = Quaternion.Lerp(GetComponent<Rigidbody>().rotation,targetRotation, velGiro * Time.deltaTime);
-		GetComponent<Rigidbody> ().MoveRotation(newRotation);
+		Quaternion newRotation = Quaternion.Lerp(playerRigidbody.rotation,targetRotation, velGiro * Time.deltaTime);
+		playerRigidbody.MoveRotation(newRotation);
 		
 		
 	}
@@ -56,7 +59,34 @@ public class Player1 : MonoBehaviour {
 	
 	void animaPlayer(float hor, float ver){
 		bool correPlayer =hor != 0f || ver != 0f;
-		anim.SetBool("corriendo",correPlayer);
+		anim.SetBool("isRunning",correPlayer);
+
+		/*
+		Vector3 direction = enemigo.position - this.transform.position;
+		float angle = Vector3.Angle (direction,head.up);
+
+		if (Vector3.Distance (enemigo.position, this.transform.position) < 20 && angle <30) {
+
+			Quaternion targetRotation = Quaternion.LookRotation(direction);
+			this.transform.rotation=  Quaternion.Slerp(this.transform.rotation,targetRotation, 0.1f);
+
+			anim.SetBool ("isIdle", false);
+			if (direction.magnitude > 5) {
+				this.transform.Translate (0, 0, 0.05f);
+				anim.SetBool ("isRunning", true);
+				anim.SetBool ("isShooting", false);	
+			} else {
+				anim.SetBool ("isShooting", true);
+				anim.SetBool ("isRunning", false);
+			}
+
+
+		} else {
+			anim.SetBool ("isIdle", true);
+			anim.SetBool ("isRunning", false);
+			anim.SetBool ("isShooting", false);
+		}*/
+
 		
 	}
 }
