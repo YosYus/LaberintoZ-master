@@ -52,11 +52,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\FantasyMonster\Skeleton\script\Enemigo.cs" />
+     <Compile Include="Assets\Scripts\CubeAI.cs" />
      <Compile Include="Assets\Scripts\LaberintoGenerator\Cell.cs" />
      <Compile Include="Assets\Scripts\LaberintoGenerator\CellAndRelativePosition.cs" />
      <Compile Include="Assets\Scripts\LaberintoGenerator\LaberintoGenerator.cs" />
      <Compile Include="Assets\Scripts\LaberintoGenerator\VisualCell.cs" />
      <Compile Include="Assets\Scripts\LaberintoGenerator\Zombie.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovimiento.cs" />
      <Compile Include="Assets\Scripts\Tools\ListExtensions.cs" />
      <Compile Include="Assets\ToonSoldiers_demo\script\CameraP1.cs" />
      <Compile Include="Assets\ToonSoldiers_demo\script\Player1.cs" />
